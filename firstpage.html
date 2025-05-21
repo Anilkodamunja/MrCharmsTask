@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>First Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fafb;
+    }
+    header {
+      background-color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+    }
+    .logo {
+      font-size: 24px;
+      color: #ff7a00;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background-color: #f5f7fa;
+      font-size: 14px;
+      color: #888;
+      border-bottom: 1px solid #ccc;
+    }
+    .breadcrumb strong {
+      color: black;
+    }
+    .container {
+      padding: 20px;
+    }
+    .action-buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .left-buttons button {
+      background-color: white;
+      border: 2px solid #00b7bd;
+      color: #00b7bd;
+      padding: 10px 20px;
+      margin-right: 10px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+    .left-buttons button.active {
+      background-color: #00b7bd;
+      color: white;
+      font-weight: 600;
+    }
+    .right-button {
+      margin-left: auto;
+    }
+    .right-button button {
+      background-color: #ff7a00;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 25px;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .card-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      flex: 1 1 300px;
+      max-width: 300px;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+    .card-content {
+      padding: 20px;
+    }
+    .card-content h3 {
+      margin: 0 0 6px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .matched-table {
+      width: 100%;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      overflow-x: auto;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px;
+    }
+    tr:not(:last-child) {
+      border-bottom: 1px solid #eee;
+    }
+    tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .profile-pic {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    .message-btn {
+      background-color: #ff7a00;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .match-status {
+      color: #ff7a00;
+      font-weight: bold;
+    }
+    @media (max-width: 768px) {
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .action-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .right-button {
+        margin-top: 10px;
+        margin-left: 0;
+      }
+      .message-btn{
+        background-color: #ff7a00;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 50%;
+      cursor: pointer;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">ZaanVar</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">Book a Vet</a>
+      <a href="#">Shopping</a>
+      <a href="#">About us</a>
+    </nav>
+    <button style="border: 1px solid #00b7bd; color: #00b7bd; background: white; padding: 8px 16px; border-radius: 20px;">LOG IN</button>
+  </header>
+  <div class="breadcrumb">Adoption / Home / <strong>My posts</strong></div>
+
+  <div class="container">
+    <div class="action-buttons">
+      <div class="left-buttons">
+        <button>Adopt</button>
+        <button class="active">Rehomed</button>
+      </div>
+      <div class="right-button">
+        <button>+ Add post</button>
+      </div>
+    </div>
+
+    <div class="card-container">
+      <div class="card">
+        <img src="https://placedog.net/300/200?id=1" alt="Dog">
+        <div class="card-content">
+          <h3>Rottweiler</h3>
+          <p>2 Years 8 Months, Female</p>
+          <p><i class="fas fa-map-marker-alt"></i> Ameerpet, Hyderabad (75 Miles)</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://placedog.net/300/200?id=2" alt="Dog">
+        <div class="card-content">
+          <h3>German Shepherd</h3>
+          <p>3 Years 2 Months, Male</p>
+          <p><i class="fas fa-map-marker-alt"></i> Madhapur, Hyderabad (50 Miles)</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://placedog.net/300/200?id=3" alt="Dog">
+        <div class="card-content">
+          <h3>Labrador</h3>
+          <p>1 Year 4 Months, Female</p>
+          <p><i class="fas fa-map-marker-alt"></i> Jubilee Hills, Hyderabad (60 Miles)</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Matched Profiles</h2>
+    <div class="matched-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Full Name</th>
+            <th>Pet Name</th>
+            <th>Location</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img class="profile-pic" src="https://placedog.net/40/40?id=10" alt="">Ranjith Soma</td>
+            <td>Simba</td>
+            <td>Yellareddy road Ameerpet, Hyderabad</td>
+            <td><span class="match-status">80%</span> <button class="message-btn">Message</button></td>
+          </tr>
+          <tr>
+            <td><img class="profile-pic" src="https://placedog.net/40/40?id=11" alt="">Ranjith Soma</td>
+            <td>Snoopy</td>
+            <td>Yellareddy road Ameerpet, Hyderabad</td>
+            <td><span class="match-status">80%</span> <button class="message-btn">Message</button>
+            <button stye="border-radius:50%;" class="message-btn"><i class="far fa-comment"></button></td>
+          </tr>
+          <tr>
+            <td><img class="profile-pic" src="https://placedog.net/40/40?id=12" alt="">Ranjith Soma</td>
+            <td>Miro</td>
+            <td>Yellareddy road Ameerpet, Hyderabad</td>
+            <td><span class="match-status">80%</span> <button class="message-btn">Message</button></td>
+          </tr>
+          <tr>
+            <td><img class="profile-pic" src="https://placedog.net/40/40?id=13" alt="">Ranjith Soma</td>
+            <td>Venky</td>
+            <td>Yellareddy road Ameerpet, Hyderabad</td>
+            <td><span class="match-status">80%</span> <button class="message-btn">Message</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
